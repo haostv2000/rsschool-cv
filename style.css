@@ -13,12 +13,11 @@ body {
 
 .container {
     width: 80%;
-    margin: 0 auto;
     padding: 20px;
 }
 
 header {
-    background-color: #005fae;
+    background-color: rgb(86,0,87);
     color: #fff;
     padding: 30px 0;
     text-align: center;
@@ -40,30 +39,58 @@ h2 {
 
 main{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 }
 
 section {
     margin: 40px 0;
 }
 
-.profile .profile-info {
+.text-description {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 }
 
+.profile .profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .profile-photo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-top: 50px;
+    position: absolute;
+    top: 39%;
+    left: 83%;
+    transform: translateX(-50%); 
+    height: 612px;
+    width: 408px;
     overflow: hidden;
-    background-image: url('./images/logo.jpg');
+    background-image: url('./images/logo-removebg-preview.png');
     background-size: cover;
     background-position: center;
+    margin-right: 30px;
+    clip-path: ellipse(50% 70% at 50% 50%); 
 }
+
+.profile-photo-background {
+    position: absolute;
+    top: 40%;
+    left: 80.4%;
+    transform: translateX(-50%);
+    height: 650px;
+    width: 500px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin-right: 30px;
+    background-image: url('./images/bgcolor.png');
+    z-index: -1;
+    clip-path: ellipse(60% 60% at 50% 50%); 
+}
+
 
 .profile-details p {
     font-size: 18px;
@@ -73,22 +100,22 @@ section {
 .skills ul {
     list-style-type: none;
     line-height: 1.8;
+    
 }
 
 .skills li {
     font-size: 18px;
+    text-wrap: no-wrap;
 }
 
 .code-sample pre {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    overflow-x: auto;
+    
 }
 
-.code-sample code {
-    font-family: 'Courier New', Courier, monospace;
+.code-sample pre code{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .experience ul {
